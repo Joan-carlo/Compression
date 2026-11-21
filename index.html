@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compression Time</title>
+        <link rel="icon" href="img/calcular.png" type="image/png">
+        <link rel="stylesheet" href="Style/Styles.css">
+        <script src="Script/calculos.js"></script>
+    </head>
+    <body>
+        <h1>Compression Time</h1>
+        <header>
+            <p>
+                Pequeña páguina que te ayuda ajustar el tiempo de Compression <br/>
+                en máquinas TOWA.
+            </p>
+        </header>
+        <center>
+        <div class="contenedor">
+            <div class="formulario">
+                <form id="towaCompression">
+                    <table border="2">
+                        <tr>
+                            <th colspan="2">Información por medio de la máquina</th>
+                        </tr>
+                        <tr>
+                            <th><label for="opcionResina">Resina cargada en máquina:</label></th>
+                            <td>
+                                <select name="resina" id="opcionResina">
+                                    <option value="sinOpcion">Selecione una opción</option>
+                                    <option value="42L">42L</option>
+                                    <option value="43L">43L</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="CT">Compression Time [seg]:</label></th>
+                            <td><input type="number" step="0.1" name="CT" id="CT" value="0.0"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="Pos">Molding Speed Shift 2-3 [mm]:</label></th>
+                            <td><input type="number" step="0.001" name="Position" id="Pos" value="0.0"></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><input type="button" value="Calcular" onclick="calcular()"></th>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <br />
+            <div class="datosObtenidos">
+                <table border="2">
+                    <tr>
+                        <th colspan="2">Datos Obtenidos</th>
+                    </tr>
+                    <tr>
+                        <th>Compression Time [seg]:</th>
+                        <td id="newCT">Esperando datos</td>
+                    </tr>
+                    <tr>
+                        <th>Molding Speed Shift 2-3 [mm]:</th>
+                        <td id="newPos01">Esperando datos</td>
+                    </tr>
+                    <tr>
+                        <th>Molding Speed Shift 3-4 [mm]:</th>
+                        <td id="newPos02">Esperando datos</td>
+                    </tr>
+                    <tr>
+                        <th>Molding Speed Shift 4-5 [mm]:</th>
+                        <td id="newPos03">Esperando datos</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </center>
+    </body>
+</html>
